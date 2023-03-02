@@ -1,4 +1,4 @@
-#include "/home/jack/ADS/Player.h"
+#include "Player.h"
 
 class Referee
 {

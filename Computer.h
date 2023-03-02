@@ -1,6 +1,6 @@
 #ifndef Computer_h
 #define Computer_h
-#include "/home/jack/ADS/Player.h"
+#include "Player.h"
 #include<string>
 #include<iostream>
 
