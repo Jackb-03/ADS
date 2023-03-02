@@ -9,8 +9,8 @@ class Human: public Player
 private:
     /* data */
 public:
-    std::string name;
-    Human(/* args */);
+    std::string name="Human";
+    Human(std::string Name);
     ~Human();
     char makeMove();
     std::string getName();

@@ -2,8 +2,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-Human::Human(/* args */)
+
+
+Human::Human(string name)
 {
+    this->name = name;
 }
 
 Human::~Human()
@@ -15,20 +18,15 @@ char Human::makeMove(){
     cout<< "Enter move: ";
     cin >> move; 
     while(move != 'R' && move != 'P' && move != 'S'){
-            cout<< "Please enter 'R', 'P', 'S' ";
+            cout<< "Enter move: ";
             cin >> move; 
     }
         return move;
 }
 
 string Human::getName(){
-    string name;
-    cout<< "Please enter a name";
-    cin>>name;
-    if(name ==""){
-        name = "Human";
-    }
-    return name;
+    return this->name;
+
 
 
 }
