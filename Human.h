@@ -10,6 +10,7 @@ private:
     /* data */
 public:
     std::string name="Human";
+    Human();
     Human(std::string Name);
     ~Human();
     char makeMove();

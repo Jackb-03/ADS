@@ -10,7 +10,7 @@ public:
     Player(/* args */);
     ~Player();
     virtual char makeMove()=0;
-    std::string getName(std::string name){};
+    virtual std::string getName()=0;
 };
 
 
