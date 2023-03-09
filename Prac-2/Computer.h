@@ -14,6 +14,7 @@ public:
     ~Computer();
     char makeMove();
     std::string getName();
+    
 };
 
 
