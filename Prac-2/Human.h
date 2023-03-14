@@ -1,6 +1,8 @@
 #ifndef Human_h
 #define Human_h
 #include "Player.h"
+#include "Move.h"
+
 #include<string>
 #include<iostream>
 
@@ -10,10 +12,11 @@ private:
     /* data */
 public:
     std::string name="Human";
+    
     Human();
-    Human(std::string Name);
+    Human(std::string ref);
     ~Human();
-    char makeMove();
+    Move * makeMove(Referee name);
     std::string getName();
 
 };

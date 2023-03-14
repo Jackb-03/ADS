@@ -1,6 +1,9 @@
 #include "Human.h"
+#include "Referee.h"
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 Human::Human()
@@ -18,10 +21,13 @@ Human::~Human()
 {
 }
 
-char Human::makeMove(){
-    char move;
+Move* Human::makeMove(Referee ref){
+    string move;
     cout<< "Enter move: ";
     cin >> move; 
+    for(int i =0 ; i < size(name.knownMoves); i ++){
+        if()
+    }
     while(move != 'R' && move != 'P' && move != 'S'){
             cout<< "Enter move: ";
             cin >> move; 

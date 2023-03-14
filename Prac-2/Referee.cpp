@@ -1,4 +1,5 @@
 #include "Referee.h"
+#include "Move.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,17 +15,13 @@ Referee::~Referee()
 }
 
 Player* Referee::refGame(Player* player1, Player* player2){
-    char move1 = player1->makeMove();
-    char move2 = player2->makeMove();
+    Move* move1 = player1->makeMove();
+    Move* move2 = player2->makeMove();
     if(move1==move2){
         return nullptr;
     }
-    else if(move1 == 'P'){
-        return player1;
-    }
-    else if(move1 == 'S'){
-        return player2;
-    }
+    for(int i = 0; i<move1->weakness.size();i++){}
+     
 
     return nullptr;
 }

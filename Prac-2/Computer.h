@@ -1,6 +1,8 @@
 #ifndef Computer_h
 #define Computer_h
 #include "Player.h"
+#include "Move.h"
+
 #include<string>
 #include<iostream>
 
@@ -12,7 +14,7 @@ private:
 public:
     Computer(/* args */);
     ~Computer();
-    char makeMove();
+    Move * makeMove();
     std::string getName();
     
 };

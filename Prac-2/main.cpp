@@ -2,6 +2,7 @@
 #include "Referee.h"
 #include "Human.h"
 #include "Computer.h"
+#include "Move.h"
 #include <iostream>
 #include <string>
 using namespace std;
