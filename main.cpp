@@ -1,5 +1,10 @@
+#include <iostream>
+#include <string>
+
+#include "Reverser.h"
 #include "Truckloads.h"
+using namespace std;
 int main(int argc, char const *argv[]) {
-  Truckloads test;
-  test.numTrucks(14, 3);
+  Reverser rev;
+  cout << rev.reverseDigit(123);
 }
