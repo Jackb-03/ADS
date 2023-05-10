@@ -1,5 +1,3 @@
-// autocomplete.h
-
 #ifndef AUTOCOMPLETE_H
 #define AUTOCOMPLETE_H
 
