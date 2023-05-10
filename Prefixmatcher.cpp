@@ -1,4 +1,4 @@
-#include "Prefixmatcher.h"
+#include "PrefixMatcher.h"
 Trie::Trie() { root = new TrieNode(); }
 
 void Trie::insert(const std::string &address, int routerNumber) {
