@@ -4,15 +4,19 @@
 #include <string>
 #include <vector>
 
-#include "trie.h"
+#include "TrieNode.h"
 
 class Autocomplete {
  public:
-  void insert(const std::string &word);
-  std::vector<std::string> getSuggestions(const std::string &partialWord) const;
+  Autocomplete();
+  ~Autocomplete();
+  std::vector<std::string> getSuggestions(std::string partialWord);
+  void insert(std::string word);
 
  private:
-  Trie trie;
+  TrieNode* root;
+  void getSuggestionsHelper(TrieNode* node, std::string partialWord,
+                            std::vector<std::string>& suggestions);
 };
 
 #endif  // AUTOCOMPLETE_H

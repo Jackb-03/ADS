@@ -1,34 +1,33 @@
-#ifndef PREFIXMATCHER_H
-#define PREFIXMATCHER_H
+#include "PrefixMatcher.h"
 
-#include <iostream>
-#include <string>
-#include <unordered_map>
+PrefixMatcher::PrefixMatcher() { root = new TrieNode(); }
 
-class TrieNode {
- public:
-  std::unordered_map<char, TrieNode *> children;
-  int routerNumber;
-  TrieNode() : routerNumber(-1) {}
-};
+PrefixMatcher::~PrefixMatcher() { delete root; }
 
-class Trie {
- public:
-  Trie();
-  void insert(const std::string &address, int routerNumber);
-  int selectRouter(const std::string &networkAddress) const;
+void PrefixMatcher::insert(std::string address, int routerNumber) {
+  TrieNode* current = root;
+  for (char c : address) {
+    if (current->children.find(c) == current->children.end()) {
+      current->children[c] = new TrieNode();
+    }
+    current = current->children[c];
+  }
+  current->routerNumber = routerNumber;
+}
 
- private:
-  TrieNode *root;
-};
+int PrefixMatcher::selectRouter(std::string networkAddress) {
+  TrieNode* current = root;
+  int longestMatchingRouter = -1;
 
-class PrefixMatcher {
- public:
-  void insert(const std::string &address, int routerNumber);
-  int selectRouter(const std::string &networkAddress) const;
+  for (char c : networkAddress) {
+    if (current->children.find(c) == current->children.end()) {
+      break;
+    }
+    current = current->children[c];
+    if (current->routerNumber != -1) {
+      longestMatchingRouter = current->routerNumber;
+    }
+  }
 
- private:
-  Trie trie;
-};
-
-#endif
+  return longestMatchingRouter;
+}
