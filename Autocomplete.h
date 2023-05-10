@@ -19,4 +19,4 @@ class Autocomplete {
                             std::vector<std::string>& suggestions);
 };
 
-#endif  // AUTOCOMPLETE_H
+#endif

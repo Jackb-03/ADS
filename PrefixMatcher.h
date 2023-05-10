@@ -16,4 +16,4 @@ class PrefixMatcher {
   TrieNode* root;
 };
 
-#endif  // PREFIXMATCHER_H
+#endif

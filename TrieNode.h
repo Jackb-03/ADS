@@ -14,4 +14,4 @@ class TrieNode {
   int routerNumber;
 };
 
-#endif  // TRIENODE_H
+#endif

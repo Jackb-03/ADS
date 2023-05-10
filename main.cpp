@@ -4,7 +4,6 @@
 #include "PrefixMatcher.h"
 
 int main() {
-  // Autocomplete example
   Autocomplete autocomplete;
   autocomplete.insert("bin");
   autocomplete.insert("ball");
@@ -16,7 +15,6 @@ int main() {
   }
   std::cout << std::endl;
 
-  // PrefixMatcher example
   PrefixMatcher prefixMatcher;
   prefixMatcher.insert("110011011101", 1);
   prefixMatcher.insert("110011011", 2);
