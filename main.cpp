@@ -1,10 +1,8 @@
-// main.cpp
-
 #include <iostream>
 #include <string>
 #include <vector>
 
-#include "autocomplete.h"
+#include "Autocomplete.h"
 
 int main() {
   Autocomplete autocomplete;

@@ -1,6 +1,4 @@
-// autocomplete.cpp
-
-#include "autocomplete.h"
+#include "Autocomplete.h"
 
 void Autocomplete::insert(const std::string &word) { trie.insert(word); }
 
