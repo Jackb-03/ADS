@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
-#include "Reverser.h"
-#include "Truckloads.h"
-using namespace std;
+#include "Heap.cpp"
+
 int main(int argc, char const *argv[]) {
-  Reverser rev;
-  cout << rev.reverseDigit(123);
+  std::vector<int> heapData = {1, 2, 3, 9, 8, 5};
+  Heap<int> testHeap(heapData);
+  testHeap.insert(4);
+
+  return 0;
 }
